@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Materialize-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Font Awesome-->
+    <script src="https://kit.fontawesome.com/1bbe3cd657.js" crossorigin="anonymous"></script>
+    <title>Background image gallery carousel</title>
+    <meta name="description" content="Background image gallery carousel.">
+    <meta name="keywords" content="Background, image, gallery, carousel">
+    <meta name="author" content="Goran Kekez">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <main class="img-container">
+        <div class="img active animateTransition"
+            style="background-image: url(https://source.unsplash.com/1600x900/?nature,mountains)"></div>
+        <div class="img" style="background-image: url(https://source.unsplash.com/1600x900/?nature,sky)"></div>
+        <div class="img" style="background-image: url(https://source.unsplash.com/1600x900/?nature,lake)"></div>
+        <div class="img" style="background-image: url(https://source.unsplash.com/1600x900/?nature,water)"></div>
+        <div class="img" style="background-image: url(https://source.unsplash.com/1600x900/?nature,forest)"></div>
+        <button class="btn arrow-btn left-arrow"><i class="fas fa-arrow-left"></i></button>
+        <button class="btn arrow-btn right-arrow"><i class="fas fa-arrow-right"></i></button>
+    </main>
+    <div class="overlay"></div>
+    <script src="js/main.js"></script>
+    <noscript>JavaScript not enabled!</noscript>
+</body>
+
+</html>

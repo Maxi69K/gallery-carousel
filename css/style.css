@@ -1,0 +1,110 @@
+/*   random images:      https://source.unsplash.com/random    */
+
+/**********************************************
+                Global styles
+**********************************************/
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --transition-speed: .8s;
+  --btn-bg-color: transparent;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: var(--transition-speed) ease;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/**********************************************
+                Specific styles
+**********************************************/
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, .65);
+  z-index: -1;
+}
+
+.img-container {
+  background-color: brown;
+  width: 70vw;
+  height: 70vh;
+  margin: 15vh auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.img {
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  top: -15vh;
+  left: -15vw;
+  z-index: 1;
+  position: absolute;
+  opacity: 0;
+}
+
+.img.active {
+  opacity: 1;
+}
+
+.arrow-btn {
+  position: fixed;
+  bottom: 10vh;
+}
+
+.left-arrow {
+  left: calc(50vw - 50px);
+}
+
+.right-arrow {
+  right: calc(50vw - 50px);
+}
+
+.btn {
+  background-color: var(--btn-bg-color);
+}
+
+.animateTransition {
+  animation: swing var(--transition-speed) ease;
+}
+
+@keyframes swing {
+  0% {
+    transform: translateX(5px);
+    filter: blur(4px);
+  }
+
+  50% {
+    transform: translateX(-5px);
+  }
+
+  100% {
+    transform: translateX(0);
+    filter: blur(0px);
+  }
+}
+
+/**************************************
+            @media Queries
+**************************************/
+
+/* @media all and (min-width: 576px) {} */
